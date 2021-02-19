@@ -17,7 +17,7 @@ class TestDockerapp(unittest.TestCase):
         response = self.app.post('/', data=dict(submit='load', key='2'))
         assert response.status_code == 200
         assert b'2' in response.data
-        assert b'two' in response.data
+        assert b'twos' in response.data
 
 if __name__=='__main__':
     unittest.main()
